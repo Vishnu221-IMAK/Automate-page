@@ -19,6 +19,7 @@ import java.util.concurrent.TimeUnit;
             WebElement slider = driver.findElement(By.xpath("//div[@class='MuiBox-root css-j7qwjs']/span[1]/span[2]"));
             Actions actions = new Actions(driver);
             actions.dragAndDropBy(slider,108,0).build().perform();
+            Thread.sleep(3000);
             WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(10));
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id=':R57alklff9da:']")));
             WebElement text_box=driver.findElement(By.xpath("//input[@id=':R57alklff9da:']"));
@@ -50,6 +51,7 @@ import java.util.concurrent.TimeUnit;
             String s=element.getText();
             String s1=element.getText();
             System.out.println(s+" "+"\n"+s1);
+            driver.quit();
 
         }
 
